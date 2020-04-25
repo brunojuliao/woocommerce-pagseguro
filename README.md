@@ -1,6 +1,5 @@
-# Claudio Sanches - PagSeguro for WooCommerce #
-**Contributors:** [claudiosanches](https://profiles.wordpress.org/claudiosanches), [Gabriel Reguly](https://profiles.wordpress.org/Gabriel Reguly)  
-**Donate link:** https://claudiosanches.com/doacoes/  
+# PagSeguro for WooCommerce #
+**Contributors:** [Bruno Julião](https://twitter.com/brunojuliao)
 **Tags:** woocommerce, pagseguro, payment  
 **Requires at least:** 4.0  
 **Tested up to:** 5.2  
@@ -18,9 +17,11 @@ This plugin adds PagSeguro gateway to WooCommerce.
 
 Please notice that WooCommerce must be installed and active.
 
+Based on https://github.com/claudiosmweb/woocommerce-pagseguro
+
 ### Contribute ###
 
-You can contribute to the source code in our [GitHub](https://github.com/claudiosmweb/woocommerce-pagseguro) page.
+You can contribute to the source code in our [GitHub](https://github.com/brunojuliao/woocommerce-pagseguro) page.
 
 ### Descrição em Português: ###
 
@@ -39,6 +40,8 @@ Estão disponíveis as seguintes modalidades de pagamento:
 - **Transparente:** O cliente faz o pagamento direto no seu site sem precisar ir ao site do PagSeguro.
 
 Além que é possível utilizar o novo [sandbox do PagSeguro](https://sandbox.pagseguro.uol.com.br/vendedor/configuracoes.html).
+
+Aceita fees negativas.
 
 ### Compatibilidade ###
 
@@ -62,12 +65,12 @@ Este plugin funciona perfeitamente em conjunto com:
 Você pode esclarecer suas dúvidas usando:
 
 * A nossa sessão de [FAQ](http://wordpress.org/plugins/woocommerce-pagseguro/faq/).
-* Utilizando o nosso [fórum no Github](https://github.com/claudiosmweb/woocommerce-pagseguro).
+* Utilizando o nosso [fórum no Github](https://github.com/brunojuliao/woocommerce-pagseguro).
 * Criando um tópico no [fórum de ajuda do WordPress](http://wordpress.org/support/plugin/woocommerce-pagseguro).
 
 ### Colaborar ###
 
-Você pode contribuir com código-fonte em nossa página no [GitHub](https://github.com/claudiosmweb/woocommerce-pagseguro).
+Você pode contribuir com código-fonte em nossa página no [GitHub](https://github.com/brunojuliao/woocommerce-pagseguro).
 
 ### Agradecimentos ###
 
@@ -267,59 +270,6 @@ Por favor, caso você tenha algum problema com o funcionamento do plugin, [abra 
 
 ## Changelog ##
 
-### 2.14.0 - 2019/09/20 ###
+### 1.0.0 - 2020/04/24 ###
 
-* Atualizado o nome do plugin de "WooCommerce PagSeguro" para "Claudio Sanches - PagSeguro for WooCommerce".
-
-### 2.13.1 - 2018/08/03 ###
-
-* Corrigido alerta do PHP sobre variável inexistente.
-
-### 2.13.0 - 2018/08/02 ###
-
-* Força o campo "Bairro" como obrigatório quando checkout transparente está ativado.
-* Implementada baixa automática de estoque ao comprar por boleto (funciona apenas no WooCommerce 3 ou superior).
-* Estoque é restaurado automaticamente quando alguma notificação do PagSeguro marca o pedido como reembolsado ou cancelado (funciona apenas no WooCommerce 3 ou superior).
-* Corrigida a mudança de status do pedido de Cancelado para Processando (funciona apenas no WooCommerce 3 ou superior).
-* Adicionadas informações sobre a taxa de intermédio do PagSeguro nos meta dados do pedido.
-
-### 2.12.7 - 2018/06/21 ###
-
-* Removido métodos do Itaú e Banrisul em débito online no checkout transparente, ambos não são mais suportados pelo PagSeguro.
-
-### 2.12.6 - 2018/05/09 ###
-
-* Adicionado valor total ao parcelamento no checkout transparente para tornar mais prático para o cliente a visualização do juros. Mais detalhes em [#75](https://github.com/claudiosanches/woocommerce-pagseguro/pull/75).
-
-### 2.12.5 - 2017/05/11 ###
-
-* Corrigido valor total das parcelas do cartão de crédito no checkout transparente, o valor tinha parado de ser atualizado no WooCommerce 3.0.
-
-### 2.12.4 - 2017/04/12 ###
-
-* Corrigido icones no checkout transparente.
-
-### 2.12.3 - 2017/04/10 ###
-
-* Corrigido `ndash` que aparecia no nome dos itens listados no PagSeguro.
-
-### 2.12.2 - 2017/04/07 ###
-
-* Adicionado suporte ao novo sistema de logs do WooCommerce 3.0, assim permitindo que seja utilizado sistema de logs personalizados.
-* Adicionado validação e higienização no código de transação do PagSeguro antes de salvar.
-
-### 2.12.1 - 2017/04/04 ###
-
-* Correção dos títulos dos campos personalizados salvos ao fazer um pedido.
-
-### 2.12.0 - 2017/04/03 ###
-
-* Adicionado suporte ao WooCommerce 3.0.
-* Alterado o tipo dos campos para `tel` no Checkout Transparente. (Possível com a ajuda de [Thiago Guimarães](https://github.com/thiagogsr)).
-* Correção nas máscaras do campos devido a mudança do plugin no [woocommerce-extra-checkout-fields-for-brazil](https://github.com/claudiosanches/woocommerce-extra-checkout-fields-for-brazil/pull/49). (Possível com a ajuda de [Thiago Guimarães](https://github.com/thiagogsr)).
-
-## Upgrade Notice ##
-
-### 2.14.0 ###
-
-* Atualizado o nome do plugin de "WooCommerce PagSeguro" para "Claudio Sanches - PagSeguro for WooCommerce".
+* Atualizado para suportar fees negativas.

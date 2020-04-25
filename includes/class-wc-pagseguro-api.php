@@ -417,7 +417,7 @@ class WC_PagSeguro_API {
 			// Fees.
 			if ( 0 < count( $order->get_fees() ) ) {
 				foreach ( $order->get_fees() as $fee ) {
-					if ( 0 >= (float) $fee['line_total'] ) {
+					if ( !is_float($fee['line_total']) ) {
 						continue;
 					}
 
